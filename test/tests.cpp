@@ -6,7 +6,8 @@
 
 TEST(Test, test1) {
     Train t1;
-    EXPECT_EQ(0, t1.find_len());
+    t1.set_len(10);
+    EXPECT_EQ(10, t1.get_len());
 }
 
 TEST(Test, test2) {
