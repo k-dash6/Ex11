@@ -19,22 +19,22 @@ void Train::add(bool light) {
   }
 
   if ((this->first == nullptr) && (this->last == nullptr)) {
-	this->first = new_cage;
-	this->last = new_cage;
+    this->first = new_cage;
+    this->last = new_cage;
   }
 
   if (this->first == this->last) {
-	this->last = new_cage;
-	this->first->next = new_cage;
-	this->first->prev = new_cage;
+    this->last = new_cage;
+    this->first->next = new_cage;
+    this->first->prev = new_cage;
     this->last->next = this->first;
-	this->last->prev = this->first;
+    this->last->prev = this->first;
   } else {
-	new_cage->prev = this->last;
-	this->last->next = new_cage;
-	this->last = new_cage;
-	this->first->prev = this->last;
-	this->last->next = this->first;
+    new_cage->prev = this->last;
+    this->last->next = new_cage;
+    this->last = new_cage;
+    this->first->prev = this->last;
+    this->last->next = this->first;
   }
 }
 
