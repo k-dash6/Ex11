@@ -19,7 +19,7 @@ TEST(Test, test2) {
 TEST(Test, test3) {
     Train t3;
     t3.add(false);
-    EXPECT_EQ(true, t3.get_first()->get());
+    EXPECT_EQ(false, t3.get_first()->get());
 }
 
 TEST(Test, test4) {
