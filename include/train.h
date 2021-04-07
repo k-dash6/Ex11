@@ -3,10 +3,10 @@
 #define INCLUDE_TRAIN_H_
 
 class Cage {
-private:
+ private:
     bool light;
 
-public:
+ public:
     Cage* next;
     Cage* prev;
     Cage() : light(false), next(nullptr), prev(nullptr) {}
@@ -16,12 +16,12 @@ public:
 };
 
 class Train {
-private:
+ private:
     Cage* first;
     Cage* last;
 
-public:
-    Train();   
+ public:
+    Train();
     void add(bool light = false);
     void print();
     int find_len();
