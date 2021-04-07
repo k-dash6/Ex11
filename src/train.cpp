@@ -42,9 +42,9 @@ void Train::print() {
   Cage* k = this->first;
   int sum = 1;
   while (k != this->last) {
-	std::cout << "Cage" << sum << " - " << k->get();
-	sum++;
-	k = k->next;
+    std::cout << "Cage" << sum << " - " << k->get();
+    sum++;
+    k = k->next;
   }
   std::cout << "Cage" << sum << " - " << k->get();
 }
@@ -54,17 +54,17 @@ int Train::find_len() {
   k->on();
   unsigned int len = 1;
   while (1) {
-	for (unsigned int i = 0; i < len; i++) {
-	  k = k->next;
-	  k->off();
-	}
-	for (unsigned int i = 0; i < len; i++) {
-	  k = k->prev;
-	}
-	if (k->get() == false) {
-	  break;
-	}
-	len++;
+    for (unsigned int i = 0; i < len; i++) {
+      k = k->next;
+      k->off();
+    }
+    for (unsigned int i = 0; i < len; i++) {
+      k = k->prev;
+    }
+    if (k->get() == false) {
+      break;
+    }
+    len++;
   }
   return len;
 }
