@@ -24,8 +24,8 @@ public:
     Train();   
     void add(bool light = false);
     void print();
-    size_t find_len();
-    void get_len();
+    int find_len();
+    int get_len();
     void set_len(unsigned int len);
     Cage* get_first() { return first; }
     Cage* get_last() { return last; }

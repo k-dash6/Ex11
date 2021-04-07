@@ -52,7 +52,7 @@ void Train::print() {
 	std::cout << "Cage" << sum << " - " << k->get();
 }
 
-size_t Train::find_len() {
+int Train::find_len() {
 	Cage* k = this->first;
 	k->on();
 	unsigned int len = 1;
@@ -72,8 +72,8 @@ size_t Train::find_len() {
 	return len;
 }
 
-void Train::get_len() {
-	std::cout << this->find_len();
+int Train::get_len() {
+	return len;
 }
 
 void Train::set_len(unsigned int len) {
