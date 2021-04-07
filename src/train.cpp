@@ -13,9 +13,9 @@ void Train::add(bool light) {
   Cage* new_cage = new Cage;
 
   if (light == false) {
-	new_cage->off();
+    new_cage->off();
   } else {
-	new_cage->on();
+    new_cage->on();
   }
 
   if ((this->first == nullptr) && (this->last == nullptr)) {
@@ -24,17 +24,17 @@ void Train::add(bool light) {
   }
 
   if (this->first == this->last) {
-	  this->last = new_cage;
-	  this->first->next = new_cage;
-	  this->first->prev = new_cage;
-	  this->last->next = this->first;
-	  this->last->prev = this->first;
+	this->last = new_cage;
+	this->first->next = new_cage;
+	this->first->prev = new_cage;
+    this->last->next = this->first;
+	this->last->prev = this->first;
   } else {
-	  new_cage->prev = this->last;
-	  this->last->next = new_cage;
-	  this->last = new_cage;
-	  this->first->prev = this->last;
-	  this->last->next = this->first;
+	new_cage->prev = this->last;
+	this->last->next = new_cage;
+	this->last = new_cage;
+	this->first->prev = this->last;
+	this->last->next = this->first;
   }
 }
 
