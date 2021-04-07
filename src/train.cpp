@@ -29,13 +29,13 @@ void Train::add(bool light) {
 	this->first->prev = new_cage;
 	this->last->next = this->first;
 	this->last->prev = this->first;
-	} else {
-	    new_cage->prev = this->last;
-	    this->last->next = new_cage;
-	    this->last = new_cage;
-	    this->first->prev = this->last;
-	    this->last->next = this->first;
-		}
+  } else {
+	new_cage->prev = this->last;
+	this->last->next = new_cage;
+	this->last = new_cage;
+	this->first->prev = this->last;
+	this->last->next = this->first;
+  }
 }
 
 void Train::print() {
@@ -55,14 +55,14 @@ int Train::find_len() {
   unsigned int len = 1;
   while (1) {
 	for (unsigned int i = 0; i < len; i++) {
-		k = k->next;
-		k->off();
+	  k = k->next;
+	  k->off();
 	}
 	for (unsigned int i = 0; i < len; i++) {
-		k = k->prev;
+	  k = k->prev;
 	}
 	if (k->get() == false) {
-		break;
+	  break;
 	}
 	len++;
   }
