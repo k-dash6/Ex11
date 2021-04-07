@@ -13,7 +13,7 @@ TEST(Test, test1) {
 TEST(Test, test2) {
     Train t2;
     t2.set_len(10);
-    EXPECT_EQ(10, t2.find_len());
+    EXPECT_EQ(10, t2.get_len());
 }
 
 TEST(Test, test3) {
@@ -26,6 +26,6 @@ TEST(Test, test4) {
     Train t4;
     t4.set_len(10);
     t4.add();
-    EXPECT_EQ(10, t4.find_len());
+    EXPECT_EQ(10, t4.get_len());
 }
 
